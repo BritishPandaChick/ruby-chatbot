@@ -9,7 +9,7 @@ channel  = '#CodingPandas'
  
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} 0 * #{nickname}"
-socket puts "JOIN #{channel}"
+socket.puts "JOIN #{channel}"
  
 while message = socket.gets do
   puts message
