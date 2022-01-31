@@ -1,11 +1,11 @@
 require 'socket'
  
-server  = 'karma.freenode.net'
+server  = 'teepee.freenode.net'
 port    = 6667
 socket  = TCPSocket.open(server, port)
  
 nickname = 'SkillcrushBotOMG'
-channel  = '#codingpandas123'
+channel  = '#BananaStand123'
  
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} 0 * #{nickname}"
