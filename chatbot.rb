@@ -1,11 +1,11 @@
 require 'socket'
  
-server  = 'karma.freenode.net'
+server  = 'irc.freenode.net'
 port    = 6667
 socket  = TCPSocket.open(server, port)
  
 nickname = 'SkillcrushBotOMG'
-channel  = '#codingpandas123'
+channel  = '#BananaStand123'
  
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} 0 * #{nickname}"
@@ -18,5 +18,8 @@ while message = socket.gets do
     server = message.split(':').last
     puts "PONG #{server}"
     socket.puts "PONG #{server}"
+  elsif message.match('How are you?')
+    puts "PRIVMSG #{channel} :I'm great, thanks!"
+    socket.puts "PRIVMSG #{channel} :I'm great, thanks!"
   end
 end 
